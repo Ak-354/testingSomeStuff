@@ -1,22 +1,35 @@
 hello till now i learned:
+
 1) init to make a repo or current working directory
+	ls -a to see the hidden files in directory .git is hidden 
+
 2) rm -rf .git to undo init
+	it deletes the .git file which is the reason for git repo existence
+
 3) mkdir to make a new folder
+
 4) touch fileName.extension to create a new file
+
 5) git add . here "." means all the files in current folder or directory
 	you can also do git add fileName.extension
 	add means to make the file to go from directory to staging area so u can commit
+
 6) vi fileName.extension to open the file
 	to exit vi press esc then type  :x where --INSERT-- is written
    do cat fileName.ext to see what is in the file
+
 7) Never commit in the main branch
    git branch branchName: to create new branch
    git checkout branchName :to enter in the branchName
+
 8) git status:to check in which state(directory(Red) or staging area(green)) the file is
 	or to tell whether the files are ready to commit or not
+
 9) git diff means what is the difference between the committed one and current one
+
 10) git remote add origin linkOfYourRepository
 	git push origin branchName 
 	to do above always add and commit the modified work then push it to the origin
 
+11) git log: contains all the information regarding the commits and a large unique string thingy to edit stuff
 
