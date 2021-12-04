@@ -1,3 +1,0 @@
-hello world
-second line is missing
-second line is added
