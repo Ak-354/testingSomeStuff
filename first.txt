@@ -1,24 +1,80 @@
-hello till now i learned:
+git --version : to check version og git
+clear or ctrl+l to clear screen
+
+
+configure git
+git config --global user.name "user name"
+git config --global user.email "email"
+git config --global color.ui auto
+git config : for more options
+cd path to go in the directory
+cd .. to get out of directory
+
 
 1) init to make a repo or current working directory
 	ls -a to see the hidden files in directory .git is hidden 
 
 2) rm -rf .git to undo init
 	it deletes the .git file which is the reason for git repo existence
+	to again make it a dir do git init
+
 
 3) mkdir to make a new folder
 
 4) touch fileName.extension to create a new file
 
-5) git add . here "." means all the files in current folder or directory
+5) git add . here "." means all the files in current folder or directory are moved to staged area
 	you can also do git add fileName.extension
 	add means to make the file to go from directory to staging area so u can commit
+
+  Basic Operations
+	to add a file in github 
+	git add .(for all files) or fileName.ext(takes file to stage area)
+	git commit -m "description"
+  	git push origin master Branch name (if u already added the origin if not then do git remote add origin https link to repo in github(create this repo in github first))   
+ 	file is shown in github
+	
+
+    git rm --cached filename : to remove the file from stage area
+    git rm -r --cached . : to remove all files from staged area
+    
+	git clean -fd to remove all unstaged files and directories
+	
+	same hai upar aur neeche vala
+	
+         To delete untracked files and directories:	
+	 git clean -df
+	
+         If you want to interactively decide the fate of the files and directories:
+ 	 git clean -di
+
+	
+	 Delete untracked files only:
+	 git clean -f
+	
+	Interactively delete files only:
+	 git clean -i
+   	git rm filename or . :to remove file(s) from local work directory
+	
+	to remove a file from github
+		git rm filename
+		git push origin branchname
+		file removed 
+The repository, or repo, is the “container” that tracks the changes to your project files. It holds all of the commits — a snapshot of all your files at a point in time — 
+that have been made. You can access the commit history with the Git log.
+
+The working tree, or working directory, consists of files that you are currently working on. You can think of a working tree as a file system where you can view and modify files.
+
+The index, or staging area, is where commits are prepared. The index compares the files in the working tree to the files in the repo. When you make a change in the working tree,
+ the index marks the file as modified before it is committed.
 
 6) vi fileName.extension to open the file
 	to exit vi press esc then type  :x where --INSERT-- is written
    do cat fileName.ext to see what is in the file
 
-7) Never commit in the main branch
+7) git commit -m "descripton"
+   git commit --ammend -m "change the description of latest commit"
+   Never commit in the main branch
    git branch branchName: to create new branch
    git checkout branchName :to enter in the branchName
 
@@ -26,10 +82,12 @@ hello till now i learned:
 	or to tell whether the files are ready to commit or not
 
 9) git diff means what is the difference between the committed one and current one
+   git restore fileName.txt to discard all the changes to file given the file before sending it to stage area(git diff will be discarded)
+	basically removes the new changes made to files before sending to the staged area.
+
 
 10) git remote add origin linkOfYourRepository
 	git push origin branchName 
 	to do above always add and commit the modified work then push it to the origin
 
 11) git log: contains all the information regarding the commits and a large unique string thingy to edit stuff
-
