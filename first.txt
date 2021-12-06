@@ -9,7 +9,7 @@ git config --global color.ui auto
 git config : for more options
 cd path to go in the directory
 cd .. to get out of directory
-
+ git config --list: Once git is installed and one can get details of the user by using this command.
 
 1) init to make a repo or current working directory
 	ls -a to see the hidden files in directory .git is hidden 
@@ -91,3 +91,10 @@ The index, or staging area, is where commits are prepared. The index compares th
 	to do above always add and commit the modified work then push it to the origin
 
 11) git log: contains all the information regarding the commits and a large unique string thingy to edit stuff
+
+12) git branch brancName :creates a branch
+    git branch -m new name:rename your branch
+   git checkout branchName:enters that brach
+   git checkout -b branchName:creates a branch and checkouts in it
+   git checkout - goes in the previous branch
+   git branch -d branchName :to delete a branch but go to main or master branch first
